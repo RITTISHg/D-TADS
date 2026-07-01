@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-07-01T19:42:45",
+  "n_benchmark_events": 50000,
+  "results": [
+    {
+      "name": "Feature Extraction (data gen \u2192 18-dim vector)",
+      "n_events": 20000,
+      "elapsed_ms": 3641.3,
+      "events_per_sec": 5493,
+      "avg_latency_ms": 0.1821,
+      "avg_latency_us": 182.07,
+      "passed": false
+    },
+    {
+      "name": "Isolation Forest Inference (batch scoring)",
+      "n_events": 50000,
+      "elapsed_ms": 420.52,
+      "events_per_sec": 118901,
+      "avg_latency_ms": 0.0084,
+      "avg_latency_us": 8.41,
+      "passed": true
+    },
+    {
+      "name": "GBDT Inference (batch scoring)",
+      "n_events": 50000,
+      "elapsed_ms": 61.09,
+      "events_per_sec": 818513,
+      "avg_latency_ms": 0.0012,
+      "avg_latency_us": 1.22,
+      "passed": true
+    },
+    {
+      "name": "Full Ensemble (IF + GBDT + threshold)",
+      "n_events": 50000,
+      "elapsed_ms": 467.45,
+      "events_per_sec": 106963,
+      "avg_latency_ms": 0.0093,
+      "avg_latency_us": 9.35,
+      "passed": true
+    },
+    {
+      "name": "Single-Event Streaming (per-event scoring)",
+      "n_events": 5000,
+      "elapsed_ms": 83720.47,
+      "events_per_sec": 60,
+      "avg_latency_ms": 16.7441,
+      "avg_latency_us": 16744.09,
+      "passed": false
+    }
+  ],
+  "all_passed": false,
+  "environment": {
+    "python": "3.13.5",
+    "platform": "linux"
+  }
+}

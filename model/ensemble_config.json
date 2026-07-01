@@ -1,0 +1,62 @@
+{
+  "ensemble_version": "v2.1.0-tuned",
+  "ensemble_weights": {
+    "isolation_forest": 0.3,
+    "gbdt": 0.7
+  },
+  "optimal_threshold": 0.16000000000000003,
+  "validation_metrics": {
+    "f1_score": 0.997229916897507,
+    "precision": 0.994475138121547,
+    "recall": 1.0,
+    "auc": 0.9999969474969475,
+    "fpr_reduction_pct": -49.999999999999986
+  },
+  "baseline_params": {
+    "n_estimators": 100,
+    "max_samples": 256,
+    "contamination": 0.1,
+    "random_state": 42
+  },
+  "gbdt_params": {
+    "n_estimators": 35,
+    "learning_rate": 0.15,
+    "max_depth": 4,
+    "subsample": 0.85,
+    "random_state": 42,
+    "min_samples_split": 10,
+    "min_samples_leaf": 5
+  },
+  "feature_names": [
+    "TransactionAmt",
+    "ProductCD_enc",
+    "card1",
+    "card6_enc",
+    "addr1",
+    "addr2",
+    "dist1_filled",
+    "C1",
+    "C2",
+    "C11",
+    "C13",
+    "D1",
+    "D3",
+    "D15",
+    "M1_enc",
+    "M2_enc",
+    "M4_enc",
+    "M6_enc"
+  ],
+  "training_samples": 5000,
+  "validation_samples": 2000,
+  "test_samples": 2000,
+  "ab_test_results": {
+    "group_a_fpr": 0.002173913043478261,
+    "group_b_fpr": 0.003260869565217391,
+    "reduction_pct": -49.999999999999986,
+    "chi2_statistic": 0.0,
+    "chi2_p_value": 1.0,
+    "group_a_events": 1000,
+    "group_b_events": 1000
+  }
+}

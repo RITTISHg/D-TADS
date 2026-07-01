@@ -194,7 +194,7 @@ export default function App() {
       console.error("Gemini call failed:", err);
       setAlerts(prev => prev.map(a => a.id === alertId ? { 
         ...a, 
-        geminiExplanation: `⚠️ Connection to Gemini API failed. Please ensure your API key is correctly initialized in AI Studio Secrets.`, 
+        geminiExplanation: `⚠️ Connection to analysis model failed. Please ensure your GEMINI_API_KEY environment variable is configured in the environment settings.`, 
         geminiLoading: false 
       } : a));
     }
@@ -233,13 +233,13 @@ export default function App() {
               <ShieldAlert className="w-5 h-5" />
             </div>
             <div>
-              <h1 className="text-base font-bold text-slate-800 tracking-tight">D-TADS <span className="font-normal text-slate-400">// Distributed Anomaly Detection</span></h1>
+              <h1 className="text-base font-bold text-slate-800 tracking-tight">NEXUS <span className="font-normal text-slate-400">// Distributed Fraud Prevention Pipeline</span></h1>
               <p className="text-xs text-slate-400 mt-0.5 flex items-center gap-1.5">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                Real-Time Streaming Fraud Engine · IEEE-CIS Kaggle Framework
+                High-Throughput Stream Processor · Redis Streams & GBDT Ensemble Architecture
               </p>
             </div>
           </div>

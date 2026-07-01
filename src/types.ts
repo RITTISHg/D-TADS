@@ -96,7 +96,35 @@ export interface QueueStats {
   totalProcessed: number;
   queueSize: number;
   partitions: QueuePartition[];
-  brokerType: 'MemoryStream' | 'KafkaEmulator';
+  brokerType: 'MemoryStream' | 'RedisStreams';
+}
+
+export interface ABTestGroupStats {
+  groupName: 'Group A (Baseline)' | 'Group B (Tuned Ensemble)';
+  totalEvents: number;
+  truePositives: number;
+  falsePositives: number;
+  trueNegatives: number;
+  falseNegatives: number;
+  precision: number;
+  recall: number;
+  f1Score: number;
+  falsePositiveRate: number;
+}
+
+export interface ABTestStats {
+  groupA: ABTestGroupStats;
+  groupB: ABTestGroupStats;
+  fprReductionPct: number;
+  f1ImprovementPct: number;
+  isActive: boolean;
+}
+
+export interface ThresholdPoint {
+  threshold: number;
+  f1Score: number;
+  precision: number;
+  recall: number;
 }
 
 export interface SimulatorConfig {

@@ -1,0 +1,6 @@
+{
+  "name": "Distributed Transaction Anomaly Detection System",
+  "description": "A streaming transaction simulation pipeline showcasing real-time anomaly detection using Isolation Forest and XGBoost with live alerting, model tuning, and Gemini explainability.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

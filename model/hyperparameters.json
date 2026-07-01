@@ -1,0 +1,28 @@
+{
+  "baseline_isolation_forest": {
+    "version": "1.0.0",
+    "description": "Unsupervised multidimensional density anomaly detection",
+    "hyperparameters": {
+      "nEstimators": 100,
+      "maxSamples": 256,
+      "contamination": 0.10
+    }
+  },
+  "tuned_gbdt_ensemble": {
+    "version": "2.1.0-tuned",
+    "description": "Supervised sequential GBDT ensembled with Isolation Forest densities",
+    "hyperparameters": {
+      "nTrees": 35,
+      "learningRate": 0.15,
+      "maxDepth": 4,
+      "subsample": 0.85,
+      "contamination": 0.08
+    },
+    "decision_boundary": {
+      "optimal_threshold": 0.52,
+      "precision_at_threshold": 0.935,
+      "recall_at_threshold": 0.950,
+      "target_f1_score": 0.942
+    }
+  }
+}
